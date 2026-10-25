@@ -26,4 +26,6 @@ jobs:
 
       - name: Executar Suíte de Testes com Pytest
         run: |
-          pytest tests/test_harness.py -v
+          python -m pytest tests/test_harness.py -v
+        env:
+          PYTHONPATH: .
