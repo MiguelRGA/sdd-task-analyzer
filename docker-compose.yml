@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  task-analyzer-test:
+    build: .
+    image: sdd-task-analyzer:latest
+    container_name: task_analyzer_pytest_container
+    volumes:
+      - .:/app
+    command: pytest -v
